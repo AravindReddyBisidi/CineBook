@@ -1,0 +1,295 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineBook - Movie Ticket Booking</title>
+
+    <link rel="stylesheet" href="../css/stlye.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Cine<span>Book</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#movies">Movies</a>
+                </li>
+
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+
+                <li>
+                    <a href="#">Offers</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+            <button class="login-btn">
+                Login
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Book Your Movie Tickets
+            </h1>
+
+            <p>
+                Discover the latest movies and book your
+                favourite seats easily with CineBook.
+            </p>
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for movies..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Movies Section -->
+
+    <section class="movies-section" id="movies">
+
+        <div class="section-heading">
+
+            <h2>
+                Popular Movies
+            </h2>
+
+            <a href="#" id="viewAll">
+                View All
+            </a>
+
+        </div>
+
+
+        <!-- Movie Cards will be created by JavaScript -->
+
+        <div
+            class="movie-container"
+            id="movieContainer">
+        </div>
+
+
+        <!-- No movie message -->
+
+        <p
+            id="noMovie"
+            style="display: none; text-align: center; margin-top: 30px;">
+            No movies found.
+        </p>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section
+        class="categories"
+        id="categories">
+
+        <h2>
+            Explore Movies
+        </h2>
+
+        <div class="category-container">
+
+            <div
+                class="category-card"
+                data-category="Action">
+
+                <div class="category-icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Action
+                </h3>
+
+                <p>
+                    Exciting action movies
+                </p>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                data-category="Romance">
+
+                <div class="category-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Romance
+                </h3>
+
+                <p>
+                    Beautiful love stories
+                </p>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                data-category="Comedy">
+
+                <div class="category-icon">
+                    😂
+                </div>
+
+                <h3>
+                    Comedy
+                </h3>
+
+                <p>
+                    Movies that make you laugh
+                </p>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                data-category="Horror">
+
+                <div class="category-icon">
+                    👻
+                </div>
+
+                <h3>
+                    Horror
+                </h3>
+
+                <p>
+                    Thrilling horror movies
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>
+                    CineBook
+                </h2>
+
+                <p>
+                    Your simple and convenient
+                    movie ticket booking platform.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <p>Home</p>
+                <p>Movies</p>
+                <p>Theatres</p>
+                <p>Offers</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Email: support@cinebook.com
+                </p>
+
+                <p>
+                    Phone: +91 9392882651
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 CineBook. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
+```
