@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CineBook - Movie Details</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/movie-details.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Cine<span>Book</span>
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#movies">
+                        Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#categories">
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Offers
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button class="login-btn">
+                Login
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MOVIE DETAILS ================= -->
+
+    <section class="movie-details">
+
+        <div class="movie-poster">
+
+            <img
+                id="movieImage"
+                src=""
+                alt="Movie Poster">
+
+        </div>
+
+
+        <div class="movie-information">
+
+            <h1 id="movieTitle">
+                Movie Title
+            </h1>
+
+
+            <p id="movieGenre">
+                Genre
+            </p>
+
+
+            <p id="movieLanguage">
+                Language
+            </p>
+
+
+            <p id="movieRating">
+                ⭐ Rating
+            </p>
+
+
+            <p id="moviePrice">
+                Ticket Price
+            </p>
+
+
+            <p class="description">
+
+                Experience the movie in the best
+                theatres with comfortable seating,
+                great sound and an amazing viewing
+                experience.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING ================= -->
+
+    <section class="booking-section">
+
+        <h2>
+            Select Theatre
+        </h2>
+
+
+        <div class="theatre-container">
+
+            <div
+                class="theatre-card"
+                data-theatre="PVR Cinemas">
+
+                <h3>
+                    PVR Cinemas
+                </h3>
+
+                <p>
+                    Banjara Hills
+                </p>
+
+            </div>
+
+
+            <div
+                class="theatre-card"
+                data-theatre="INOX">
+
+                <h3>
+                    INOX
+                </h3>
+
+                <p>
+                    GVK One Mall
+                </p>
+
+            </div>
+
+
+            <div
+                class="theatre-card"
+                data-theatre="Cinepolis">
+
+                <h3>
+                    Cinepolis
+                </h3>
+
+                <p>
+                    Mantra Mall
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DATE ================= -->
+
+        <h2 class="selection-title">
+            Select Date
+        </h2>
+
+
+        <div class="date-container">
+
+            <button
+                class="date-btn"
+                data-date="10 Oct 2026">
+
+                <span>10</span>
+                Oct
+
+            </button>
+
+
+            <button
+                class="date-btn"
+                data-date="11 Oct 2026">
+
+                <span>11</span>
+                Oct
+
+            </button>
+
+
+            <button
+                class="date-btn"
+                data-date="12 Oct 2026">
+
+                <span>12</span>
+                Oct
+
+            </button>
+
+
+            <button
+                class="date-btn"
+                data-date="13 Oct 2026">
+
+                <span>13</span>
+                Oct
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= TIME ================= -->
+
+        <h2 class="selection-title">
+            Select Showtime
+        </h2>
+
+
+        <div class="time-container">
+
+            <button
+                class="time-btn"
+                data-time="10:00 AM">
+
+                10:00 AM
+
+            </button>
+
+
+            <button
+                class="time-btn"
+                data-time="1:30 PM">
+
+                1:30 PM
+
+            </button>
+
+
+            <button
+                class="time-btn"
+                data-time="4:30 PM">
+
+                4:30 PM
+
+            </button>
+
+
+            <button
+                class="time-btn"
+                data-time="7:30 PM">
+
+                7:30 PM
+
+            </button>
+
+
+            <button
+                class="time-btn"
+                data-time="10:30 PM">
+
+                10:30 PM
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <div class="booking-summary">
+
+            <h2>
+                Booking Summary
+            </h2>
+
+
+            <p>
+                Movie:
+
+                <strong id="summaryMovie">
+                    -
+                </strong>
+            </p>
+
+
+            <p>
+                Theatre:
+
+                <strong id="summaryTheatre">
+                    -
+                </strong>
+            </p>
+
+
+            <p>
+                Date:
+
+                <strong id="summaryDate">
+                    -
+                </strong>
+            </p>
+
+
+            <p>
+                Showtime:
+
+                <strong id="summaryTime">
+                    -
+                </strong>
+            </p>
+
+        </div>
+
+
+        <button
+            id="continueBtn"
+            class="continue-btn">
+
+            Continue to Seat Selection
+
+        </button>
+
+    </section>
+
+
+    <script src="../js/movie-details.js"></script>
+
+</body>
+
+</html>

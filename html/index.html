@@ -1,19 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>CineBook - Movie Ticket Booking</title>
 
+    <!-- IMPORTANT: style.css spelling -->
     <link rel="stylesheet" href="../css/stlye.css">
+
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- ================= NAVBAR ================= -->
 
     <header>
 
@@ -42,7 +46,7 @@
                 </li>
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
 
             </ul>
@@ -56,7 +60,7 @@
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- ================= HERO ================= -->
 
     <section class="hero">
 
@@ -70,9 +74,6 @@
                 Discover the latest movies and book your
                 favourite seats easily with CineBook.
             </p>
-
-
-            <!-- Search -->
 
             <div class="search-box">
 
@@ -93,9 +94,11 @@
     </section>
 
 
-    <!-- Movies Section -->
+    <!-- ================= MOVIES ================= -->
 
-    <section class="movies-section" id="movies">
+    <section
+        class="movies-section"
+        id="movies">
 
         <div class="section-heading">
 
@@ -110,7 +113,7 @@
         </div>
 
 
-        <!-- Movie Cards will be created by JavaScript -->
+        <!-- JavaScript will add movies here -->
 
         <div
             class="movie-container"
@@ -118,18 +121,18 @@
         </div>
 
 
-        <!-- No movie message -->
-
         <p
             id="noMovie"
-            style="display: none; text-align: center; margin-top: 30px;">
+            class="no-movie">
+
             No movies found.
+
         </p>
 
     </section>
 
 
-    <!-- Categories -->
+    <!-- ================= CATEGORIES ================= -->
 
     <section
         class="categories"
@@ -221,9 +224,9 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
 
-    <footer>
+    <footer id="contact">
 
         <div class="footer-content">
 
@@ -292,4 +295,3 @@
 </body>
 
 </html>
-```

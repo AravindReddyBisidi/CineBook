@@ -1,11 +1,10 @@
-```javascript
-// ======================================
-// CineBook - Phase 2
-// Movie Data + Search + Filter
-// ======================================
+// ==========================================
+// CineBook
+// Phase 2 - Movies + Search + Category
+// ==========================================
 
 
-// Movie data
+// ================= MOVIE DATA =================
 
 const movies = [
 
@@ -20,6 +19,7 @@ const movies = [
             "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80"
     },
 
+
     {
         id: 2,
         title: "Love Forever",
@@ -30,6 +30,7 @@ const movies = [
         image:
             "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=80"
     },
+
 
     {
         id: 3,
@@ -42,6 +43,7 @@ const movies = [
             "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=500&q=80"
     },
 
+
     {
         id: 4,
         title: "Dark Night",
@@ -53,6 +55,7 @@ const movies = [
             "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=500&q=80"
     },
 
+
     {
         id: 5,
         title: "Warrior",
@@ -63,6 +66,7 @@ const movies = [
         image:
             "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80"
     },
+
 
     {
         id: 6,
@@ -78,36 +82,34 @@ const movies = [
 ];
 
 
-// Get HTML elements
+// ================= GET ELEMENTS =================
 
 const movieContainer =
     document.getElementById("movieContainer");
 
+
 const searchInput =
     document.getElementById("searchInput");
+
 
 const searchBtn =
     document.getElementById("searchBtn");
 
+
 const noMovie =
     document.getElementById("noMovie");
+
 
 const viewAll =
     document.getElementById("viewAll");
 
 
-// ======================================
-// Display Movies
-// ======================================
+// ================= DISPLAY MOVIES =================
 
 function displayMovies(movieList) {
 
-    // Clear old movies
-
     movieContainer.innerHTML = "";
 
-
-    // Check if movies are available
 
     if (movieList.length === 0) {
 
@@ -120,12 +122,11 @@ function displayMovies(movieList) {
     noMovie.style.display = "none";
 
 
-    // Create movie cards
-
     movieList.forEach(function(movie) {
 
         const movieCard =
             document.createElement("div");
+
 
         movieCard.classList.add("movie-card");
 
@@ -173,15 +174,12 @@ function displayMovies(movieList) {
     });
 
 
-    // Add Book Now event
-
     addBookEvents();
+
 }
 
 
-// ======================================
-// Book Now Button
-// ======================================
+// ================= BOOK NOW =================
 
 function addBookEvents() {
 
@@ -191,46 +189,38 @@ function addBookEvents() {
 
     bookButtons.forEach(function(button) {
 
-        button.addEventListener("click", function() {
+        button.addEventListener(
+            "click",
+            function() {
 
-            const movieId =
-                Number(button.getAttribute("data-id"));
-
-
-            const selectedMovie =
-                movies.find(function(movie) {
-
-                    return movie.id === movieId;
-
-                });
+                const movieId =
+                    Number(
+                        button.getAttribute("data-id")
+                    );
 
 
-            if (selectedMovie) {
+                // Open movie details page
 
-                alert(
-                    "You selected: " +
-                    selectedMovie.title +
-                    "\n\nTicket Price: ₹" +
-                    selectedMovie.price
-                );
+                window.location.href =
+                    "movie-details.html?id=" +
+                    movieId;
 
             }
-
-        });
+        );
 
     });
 
 }
 
 
-// ======================================
-// Search Movies
-// ======================================
+// ================= SEARCH =================
 
 function searchMovies() {
 
     const searchText =
-        searchInput.value.toLowerCase().trim();
+        searchInput.value
+            .toLowerCase()
+            .trim();
 
 
     const filteredMovies =
@@ -244,6 +234,7 @@ function searchMovies() {
 
 
     displayMovies(filteredMovies);
+
 }
 
 
@@ -263,9 +254,7 @@ searchInput.addEventListener(
 );
 
 
-// ======================================
-// View All
-// ======================================
+// ================= VIEW ALL =================
 
 viewAll.addEventListener(
     "click",
@@ -273,7 +262,9 @@ viewAll.addEventListener(
 
         event.preventDefault();
 
+
         searchInput.value = "";
+
 
         displayMovies(movies);
 
@@ -281,9 +272,7 @@ viewAll.addEventListener(
 );
 
 
-// ======================================
-// Category Filter
-// ======================================
+// ================= CATEGORY FILTER =================
 
 const categoryCards =
     document.querySelectorAll(".category-card");
@@ -296,7 +285,9 @@ categoryCards.forEach(function(card) {
         function() {
 
             const selectedCategory =
-                card.getAttribute("data-category");
+                card.getAttribute(
+                    "data-category"
+                );
 
 
             const filteredMovies =
@@ -311,8 +302,6 @@ categoryCards.forEach(function(card) {
             displayMovies(filteredMovies);
 
 
-            // Scroll to movies
-
             document
                 .getElementById("movies")
                 .scrollIntoView({
@@ -325,9 +314,6 @@ categoryCards.forEach(function(card) {
 });
 
 
-// ======================================
-// Initial Display
-// ======================================
+// ================= INITIAL DISPLAY =================
 
 displayMovies(movies);
-```
